@@ -1,4 +1,4 @@
-package org.exemple;
+package org.jogodassenhas;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
