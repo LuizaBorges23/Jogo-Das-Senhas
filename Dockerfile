@@ -1,5 +1,5 @@
 # Estágio 1: Build (utilizando o Maven)
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copia o pom.xml e baixa as dependências (melhora o uso de cache do Docker)
@@ -11,7 +11,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Estágio 2: Execução (imagem mais leve, apenas com o JRE)
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Copia o JAR gerado no estágio anterior
