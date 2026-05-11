@@ -1,0 +1,38 @@
+# Diretório de build do Maven
+target/
+
+# Arquivos de classes compiladas (evita cópia acidental)
+*.class
+
+# Arquivos de log
+*.log
+
+# Arquivos empacotados (gerados localmente)
+# (Remova ou comente o *.jar abaixo se o seu Dockerfile apenas copia o JAR já compilado do seu host,
+#  em vez de fazer o build do Maven dentro do próprio Docker)
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Arquivos de IDEs e Editores
+.idea/
+*.iml
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+out/
+
+# Metadados do Git
+.git/
+.gitignore
+
+# Arquivos temporários e de Sistema Operacional
+.DS_Store
+Thumbs.db
+hs_err_pid*
