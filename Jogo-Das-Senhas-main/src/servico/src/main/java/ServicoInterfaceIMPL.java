@@ -13,12 +13,14 @@ public class ServicoInterfaceIMPL extends UnicastRemoteObject implements Servico
     @Override
     public void validarSenha(ServicoReceberSenha receberSenha) throws RemoteException {
 
-        do{
+     /*   do{
             System.out.println(senha);
         }while (senha == 4);{
             receberSenha();
             validarSenha(receberSenha);
         }
+
+      */
     }
 
     private void receberSenha() {
