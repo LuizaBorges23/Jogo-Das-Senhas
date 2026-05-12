@@ -8,7 +8,10 @@
     <groupId>com.gab1203</groupId>
     <artifactId>jogo-das-senhas</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+    <modules>
+        <module>servico</module>
+    </modules>
 
     <properties>
 
