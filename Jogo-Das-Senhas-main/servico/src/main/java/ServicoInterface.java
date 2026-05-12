@@ -4,8 +4,8 @@ import java.rmi.RemoteException;
 
 public interface ServicoInterface extends Remote {
 
-    void validarSenha (String senha) throws RemoteException;
+    void validarSenha (ServicoReceberSenha receberSenha) throws RemoteException;
     void estadoPartida() throws RemoteException;
-    void armazenarSenhas() throws RemoteException;
-
+    void armazenarSenhas(ServicoReceberSenha receberSenha) throws RemoteException;
+    void atualizarSenhas(ServicoReceberSenha receberSenha, boolean status) throws RemoteException;
 }
