@@ -2,27 +2,30 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 public class ServicoInterfaceIMPL extends UnicastRemoteObject implements ServicoInterface {
-
+    //senha dos jogadores
     private int senha;
+    //Receber as senhas dos jogadores
     private ServicoReceberSenha receberSenha;
 
     public ServicoInterfaceIMPL(int senha) throws RemoteException {
         this.senha = senha;
     }
 
+    //metodo de validação de senha
     @Override
     public void validarSenha(ServicoReceberSenha receberSenha) throws RemoteException {
 
-     /*   do{
+        do{
             System.out.println(senha);
-        }while (senha == 4);{
+        }while (senha == true);{
             receberSenha();
             validarSenha(receberSenha);
         }
 
-      */
     }
 
+
+    //Metodo para receber a senha
     private void receberSenha() {
         for (ServicoReceberSenha s : receberSenha.receberSenha()) {
             try{
@@ -35,27 +38,11 @@ public class ServicoInterfaceIMPL extends UnicastRemoteObject implements Servico
         }
     }
 
-    @Override
-    public void estadoPartida() throws RemoteException {
-        armazenarSenhas(receberSenha);
-        atualizarSenhas(receberSenha, true);
 
-    }
-
+//deixando no sistema a nossa senha até ela atender a primeiro jogador que ACERTAR a senha
     @Override
     public void armazenarSenhas(ServicoReceberSenha receberSenha) throws RemoteException {
         receberSenha();
     }
-
-
-    @Override
-    public void atualizarSenhas(ServicoReceberSenha receberSenha, boolean status) throws RemoteException {
-        if (status == true) {
-            System.out.println("Status atualizado com sucesso");
-        }else{
-            System.out.println("Erro ao atualizarStatus");
-        }
-    }
-
 
 }
